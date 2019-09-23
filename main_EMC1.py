@@ -1,6 +1,6 @@
 ﻿###### Set TADPOLE DATA path #########
-tadpoleD1D2File = '/mnt/data/EBMData/ADNI/Tadpole/TADPOLE_D1_D2.csv'
-DEBMFolder = '/mnt/data/Repositories/pyebm-latest/pyebm/'
+tadpoleD1D2File = '/data/TADPOLE_D1_D2.csv'
+DEBMFolder = '/pyebm/'
 
 import os
 str_exp=os.path.dirname(os.path.realpath(__file__))
