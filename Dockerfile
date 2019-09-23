@@ -13,11 +13,14 @@ RUN apt-get update && \
     mkdir /src && \
 #    git clone https://github.com/88vikram/TADPOLE_submission_with_debm.git /src && \
 #    git clone https://github.com/tadpole-share/TADPOLE_submission_with_debm.git /src && \
-    git clone https://github.com/88vikram/pyebm.git /pyebm
-    
+    git clone https://github.com/88vikram/pyebm.git /pyebm && \
+    pip3 install -r /pyebm/requirements.txt
+
 WORKDIR /src
 
 COPY . /src
+
+ENV PYTHONPATH=.:/pyebm
 
 CMD ["python3", "main_EMC1.py"]
 
